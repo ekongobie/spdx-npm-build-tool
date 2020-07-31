@@ -1,0 +1,20 @@
+{
+  "name": "spdx-npm-build-tool",
+  "version": "1.0.0",
+  "description": "SPDX NPM Build tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "spdx",
+    "npm",
+    "build"
+  ],
+  "author": "Ekong Obie Philip",
+  "license": "ISC",
+  "dependencies": {
+    "python-shell": "^2.0.1",
+    "underscore": "^1.10.2"
+  }
+}
