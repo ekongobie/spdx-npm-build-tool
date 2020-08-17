@@ -5,5 +5,7 @@ let options = {
 };
 
 PythonShell.run('python_scripts/tool.py', options, function (err, results) {
+console.log(err);
 console.log(results);
+console.log(process.argv);
 })

@@ -4,7 +4,7 @@
   "description": "SPDX NPM Build tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "spdx",
@@ -16,5 +16,8 @@
   "dependencies": {
     "python-shell": "^2.0.1",
     "underscore": "^1.10.2"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.1"
   }
 }

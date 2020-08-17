@@ -1,7 +1,9 @@
 import sys, os, logging
 import argparse
+import subprocess
 
 import utils
+
 import core
 import helpers
 
@@ -23,10 +25,13 @@ def create_spdx_document(args):
     file_types = "tv"
     deps_l = helpers.get_dependencies_file_paths(deps)
     all_identifiers = helpers.get_identifiers_for_paths(deps_l, glob_to_skip)
-    # spdx_file = core.SPDXFile(
-    #     args["project_path"], args["spdx_file_name"], all_identifiers, True, file_types
-    # )
-    # spdx_file.create_spdx_document()
+    print("before spdx_file")
+    spdx_file = core.SPDXFile(
+        args["project_path"], args["spdx_file_name"], all_identifiers, True, file_types
+    )
+    print("after spdx_file")
+    spdx_file.create_spdx_document()
+    print("after create spdx document")
 
 
 def main(argv):
