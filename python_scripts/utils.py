@@ -19,7 +19,7 @@ FILE_SUFFIX = "spdx"
 
 CODEBASE_EXTRA_PARAMS = {
     "header": "",
-    "tool_name": "Python SPDX Build tool generator",
+    "tool_name": "NPM SPDX Build tool generator",
     "tool_name_rdf": "SPDX.Doc.Generator",
     "tool_version": "1.0",
     "notice": "SPDX Doc Generator",

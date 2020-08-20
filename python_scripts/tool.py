@@ -2,7 +2,7 @@ import sys, os, logging
 import argparse
 import subprocess
 
-import utils
+from utils import get_dependencies
 
 import core
 import helpers
@@ -20,18 +20,15 @@ def build_parser(args):
 
 
 def create_spdx_document(args):
-    deps = utils.get_dependencies(args)
+    deps = get_dependencies(args)
     glob_to_skip = []
     file_types = "tv"
     deps_l = helpers.get_dependencies_file_paths(deps)
     all_identifiers = helpers.get_identifiers_for_paths(deps_l, glob_to_skip)
-    print("before spdx_file")
     spdx_file = core.SPDXFile(
         args["project_path"], args["spdx_file_name"], all_identifiers, True, file_types
     )
-    print("after spdx_file")
     spdx_file.create_spdx_document()
-    print("after create spdx document")
 
 
 def main(argv):

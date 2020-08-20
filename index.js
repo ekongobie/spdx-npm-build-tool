@@ -1,11 +1,11 @@
 let {PythonShell} = require('python-shell')
 
-let options = {
-  args: process.argv
-};
-
-PythonShell.run('python_scripts/tool.py', options, function (err, results) {
-console.log(err);
-console.log(results);
-console.log(process.argv);
-})
+export function generate_spdx(cmd_args) {
+  let options = {
+    args: cmd_args,
+  };
+  const path = require( 'path' ).join( __dirname, '.', 'python_scripts/tool.py' )
+  PythonShell.run(path, options, function (err, results) {
+  console.log("Errors: ", err);
+  })
+}

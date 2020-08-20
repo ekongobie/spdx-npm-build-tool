@@ -1,11 +1,18 @@
 {
   "name": "spdx-npm-build-tool",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "description": "SPDX NPM Build tool",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
+  "bin": {
+    "@ekongobie/spdx-npm-build-tool": "bin/spdx-npm-build-tool",
+    "spdx-npm-build-tool": "bin/spdx-npm-build-tool"
+  },
+  "publishConfig": {
+   "access": "public"
+ },
   "keywords": [
     "spdx",
     "npm",
